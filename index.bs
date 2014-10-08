@@ -47,5 +47,5 @@ Element Definitions</h2>
     </pre>
 
     <div class='note'>
-        This includes generating the right **dfn** elements, table of elements, etc.
+        This includes generating the right `dfn` elements, table of elements, etc.
     </div>
