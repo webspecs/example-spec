@@ -1,0 +1,97 @@
+
+/* Fonts: Raleway */
+@font-face {
+    font-family: "Raleway";
+    src: url("../fonts/raleway-thin-webfont.eot");
+    src: url("../fonts/raleway-thin-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/raleway-thin-webfont.woff") format("woff"),
+         url("../fonts/raleway-thin-webfont.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Font Settings */
+body {
+    font-family:    sans-serif;
+    color:  #333;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:    Raleway, sans-serif;
+}
+
+/* Structure */
+html, body {
+    margin: 0;
+    padding:    0;
+}
+p, li, dd, dt, th, td {
+    line-height:    1.8;
+}
+section, footer, div.meta {
+    max-width: 50em;
+    margin: 0 auto;
+}
+body > section {
+    padding-bottom:    3em;
+}
+section {
+    padding-bottom:    2em;
+}
+
+/* Top boilerplate */
+header {
+    display:    block;
+    background: #fff;
+    top:    0;
+    max-width: 50em;
+    margin: 1em auto 4em auto;
+}
+@media (min-width:  50em) {
+    #logo {
+        position:   fixed;
+        top:    16px;
+        left:   16px;
+    }
+}
+h1 {
+    margin: 4em 0 3em 0;
+    text-align: center;
+}
+#meta {
+    font-family:    Raleway, sans-serif;
+    text-align: right;
+    font-size:  0.8em;
+}
+#editors {
+    list-style-type:    none;
+    padding:    0;
+    margin: 0;
+    text-align: right;
+}
+#editors li {
+    line-height:    1.4;
+}
+
+/* Inlines */
+a {
+    color:  #fe6965;
+    text-decoration:    none;
+}
+code {
+    font-weight:    normal;
+}
+
+/* Footer */
+footer .copyright {
+    font-size:  0.8em;
+    border-top: 1px solid #666;
+    margin:     2em 0 1em 0;
+    padding:    0.5em 0 0 0;
+}
+
+/* Print */
+@media print {
+    a {
+        color:  #666;
+    }
+}
