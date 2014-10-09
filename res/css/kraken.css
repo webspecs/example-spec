@@ -84,6 +84,18 @@ h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
     text-align: right;
     font-size:  0.8em;
 }
+#meta button {
+    background: none;
+    color:  #fe6965;
+    font:   inherit;
+    border: none;
+    padding:    0;
+    margin: 0;
+    cursor: pointer;
+}
+#meta a {
+    border-bottom: none;
+}
 #editors {
     list-style-type:    none;
     padding:    0;
@@ -105,7 +117,7 @@ ul.toc > li      { margin: 1.5em 0; }
 ul.toc ul.toc li { margin: 0.3em 0 0 0; }
 
 ul.toc, ul.toc ul, ul.toc li { padding: 0; line-height: 1.3; }
-ul.toc a { text-decoration: none; border-bottom-style: none; }
+ul.toc a { color: #333; text-decoration: none; border-bottom-style: none; }
 ul.toc a:hover, ul.toc a:focus  { border-bottom-style: solid; }
 @supports (text-decoration-style: solid) {
     ul.toc a:hover, ul.toc a:focus  {
@@ -240,7 +252,8 @@ ol.inline li:before {
 
 
 /********** Inlines  **************/
-a {
+a:link, a:visited {
+    border-bottom: 1px solid silver;
     color:  #fe6965;
     text-decoration:    none;
 }
@@ -270,11 +283,6 @@ sup {
     font-size: 80%
 }
 /* We hyperlink a lot, so make it less intrusive */
-a:link, a:visited {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid silver;
-}
 @supports (text-decoration-color: silver) {
     a:link, a:visited {
         border-bottom: none;
@@ -310,9 +318,6 @@ a.self-link {
 }
 a.self-link:hover {
     opacity: 1;
-}
-.heading > a.self-link {
-    font-size: 83%;
 }
 li > a.self-link {
     left: -3.5em;
