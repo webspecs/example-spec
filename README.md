@@ -17,4 +17,5 @@ overwritten.
   but frankly, if you haven't already, you're going to like it for much more than just editing
   specs.
 * `LICENSE`: This is an example LICENSE for a specification (yes, that too is important).
-
+* `res`: Anything under this directory is resources that are used during the development of this
+  example but will be stored elsewhere in a shared location later.
