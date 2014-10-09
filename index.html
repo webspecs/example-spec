@@ -3,19 +3,16 @@
     <meta content="width=device-width" name=viewport>
     <title>WebSpec Example</title>
     <link href=res/css/kraken.css rel=stylesheet>
-    
-    <link href=res/img/logo.ico rel="shortcut icon" type=image/x-icon>
+    <link href=res/img/icon.png rel="shortcut icon">
   </head>
   <body>
     <header>
       <a href=http://specs.webplatform.org/ id=logo><img alt="Web Platform Specs logo" height=50 src=res/img/logo.svg width=50></a>
       <h1>WebSpec Example</h1>
-      
-      <ul id=editors>
-        <li><a href=http://berjon.com/>Robin Berjon</a>, W3C</li>
-        <li><a href=http://berjon.com/>Marcos Càceres</a>,  <a href=http://mozilla.org/>Mozilla</a></li>
-      </ul>
       <div id=meta>
+        
+        <button class=tool data-repository=[REPOSITORY]>contributors</button>
+        •
         <a href=http://github.com/[REPOSITORY]/issues>bugs</a>
         •
         <a href=http://github.com/[REPOSITORY]>⋔ me</a>
@@ -23,9 +20,11 @@
         <a href=http://creativecommons.org/publicdomain/zero/1.0/ rel=license>CC0</a>
         •
         
-        <span class=date>2014-10-08 (<a href=http://github.com/...>#deadb33f</a>)</span>
+        <span class=date>2014-10-09 (<a href=http://github.com/...>#deadb33f</a>)</span>
       </div>
     </header>
+
+    <div class=content>
 
     <h2 class="no-num no-toc no-ref heading settled" id=abstract><span class=content>Abstract</span></h2>
     <div class=p-summary data-fill-with=abstract><p>This specification is meant to evolve into a permanent example of how a WebSpec is made. Before that, though, it is used primarily as a an area in which to develop this specification style.</p>
@@ -36,8 +35,7 @@
     <div data-fill-with=table-of-contents><ul class=toc><li><a href=#intro><span class=secno>1</span> <span class=content>
 Introduction</span></a><ul class=toc><li><a href=#example><span class=secno>1.1</span> <span class=content>
 Exemplify</span></a></ul><li><a href=#eldef><span class=secno>2</span> <span class=content>
-Element Definitions</span></a><li><a href=#conformance><span class=secno></span> <span class=content>
-Conformance</span></a><li><a href=#references><span class=secno></span> <span class=content>References</span></a><ul class=toc><li><a href=#normative><span class=secno></span> <span class=content>Normative References</span></a></ul><li><a href=#index><span class=secno></span> <span class=content>Index</span></a><li><a href=#property-index><span class=secno></span> <span class=content>Property Index</span></a></ul></div>
+Element Definitions</span></a><li><a href=#conformance><span class=secno></span> <span class=content>Conformance</span></a><li><a href=#references><span class=secno></span> <span class=content>References</span></a><ul class=toc><li><a href=#normative><span class=secno></span> <span class=content>Normative References</span></a></ul><li><a href=#index><span class=secno></span> <span class=content>Index</span></a><li><a href=#property-index><span class=secno></span> <span class=content>Property Index</span></a></ul></div>
 
 
 
@@ -78,36 +76,37 @@ Element Definitions</span><a class=self-link href=#eldef></a></h2>
         This includes generating the right <code>dfn</code> elements, table of elements, etc.
     </div>
 
-<h2 class="no-ref no-num heading settled" id=conformance><span class=content>
-Conformance</span><a class=self-link href=#conformance></a></h2>
+  <h2 class="no-ref no-num heading settled" id=conformance><span class=content>Conformance</span><a class=self-link href=#conformance></a></h2>
 
-    <p>
-        Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119 terminology.
-        The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL”
-        in the normative parts of this document
-        are to be interpreted as described in RFC 2119.
-        However, for readability,
-        these words do not appear in all uppercase letters in this specification.
+  <p>
+    Conformance requirements are expressed with a combination of descriptive assertions and RFC 2119
+    terminology. The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHOULD”, “SHOULD NOT”,
+    “RECOMMENDED”, “MAY”, and “OPTIONAL” in the normative parts of this document are to be
+    interpreted as described in RFC 2119. <a data-biblio-type=normative data-link-type=biblio href=#biblio-rfc2119 title=RFC2119>[RFC2119]</a>
+  </p>
+  <p>
+    All of the text of this specification is normative except sections explicitly marked as
+    non-normative, examples, and notes.
+  </p>
+  <p>
+    Examples in this specification are introduced with the words “for example” or are set apart from
+    the normative text with <code>class="example"</code>, like this:
+  </p>
+  <div class=example>
+    This is an example of an informative example.
+  </div>
+  <p>
+    Informative notes begin with the word “Note” and are set apart from the normative text with
+    <code>class="note"</code>, like this:
+  </p>
+  <p class=note>
+    Note, this is an informative note.
+  </p>
+  <div data-fill-with=references><h2 class="no-num heading settled" id=references><span class=content>References</span><a class=self-link href=#references></a></h2><h3 class="no-num heading settled" id=normative><span class=content>Normative References</span><a class=self-link href=#normative></a></h3><dl><dt id=biblio-rfc2119 title=rfc2119><a class=self-link href=#biblio-rfc2119></a>[rfc2119]<dd>S. Bradner. <a href=http://www.ietf.org/rfc/rfc2119.txt>Key words for use in RFCs to Indicate Requirement Levels</a>. Best Current Practice. URL: <a href=http://www.ietf.org/rfc/rfc2119.txt>http://www.ietf.org/rfc/rfc2119.txt</a></dl></div>
+  <div data-fill-with=index><h2 class="no-num heading settled" id=index><span class=content>Index</span><a class=self-link href=#index></a></h2><ul class=indexlist><li>will-change, <a href=#propdef-will-change title="section 2">2</a></ul></div>
+  <div data-fill-with=property-index><h2 class="no-num heading settled" id=property-index><span class=content>Property Index</span><a class=self-link href=#property-index></a></h2><table class="proptable data"><thead><tr><th scope=col>Name<th scope=col>Value<th scope=col>Initial<th scope=col>Applies to<th scope=col>Inh.<th scope=col>%ages<th scope=col>Media<th scope=col>Computed value<tbody><tr><th scope=row><a class=css data-link-type=property href=#propdef-will-change title=will-change>will-change</a><td>auto | &lt;animateable-feature&gt;#<td>auto<td>all elements<td>no<td>n/a<td>all<td>specified value</table></div>
+  <div data-fill-with=issues-index></div>
 
-    <p>
-        All of the text of this specification is normative
-        except sections explicitly marked as non-normative, examples, and notes. <a data-biblio-type=normative data-link-type=biblio href=#biblio-rfc2119 title=RFC2119>[RFC2119]</a>
-
-    <p>
-        Examples in this specification are introduced with the words “for example”
-        or are set apart from the normative text with <code>class="example"</code>, like this:
-
-    <div class=example>
-        This is an example of an informative example.
-    </div>
-
-    <p>
-        Informative notes begin with the word “Note”
-        and are set apart from the normative text with <code>class="note"</code>, like this:
-
-    <p class=note>
-        Note, this is an informative note.
+</div>
 
 
-
-<h2 class="no-num heading settled" id=references><span class=content>References</span><a class=self-link href=#references></a></h2><h3 class="no-num heading settled" id=normative><span class=content>Normative References</span><a class=self-link href=#normative></a></h3><dl><dt id=biblio-rfc2119 title=rfc2119><a class=self-link href=#biblio-rfc2119></a>[rfc2119]<dd>S. Bradner. <a href=http://www.ietf.org/rfc/rfc2119.txt>Key words for use in RFCs to Indicate Requirement Levels</a>. Best Current Practice. URL: <a href=http://www.ietf.org/rfc/rfc2119.txt>http://www.ietf.org/rfc/rfc2119.txt</a></dl><h2 class="no-num heading settled" id=index><span class=content>Index</span><a class=self-link href=#index></a></h2><ul class=indexlist><li>will-change, <a href=#propdef-will-change title="section 2">2</a></ul><h2 class="no-num heading settled" id=property-index><span class=content>Property Index</span><a class=self-link href=#property-index></a></h2><table class="proptable data"><thead><tr><th scope=col>Name<th scope=col>Value<th scope=col>Initial<th scope=col>Applies to<th scope=col>Inh.<th scope=col>%ages<th scope=col>Media<th scope=col>Computed value<tbody><tr><th scope=row><a class=css data-link-type=property href=#propdef-will-change title=will-change>will-change</a><td>auto | &lt;animateable-feature&gt;#<td>auto<td>all elements<td>no<td>n/a<td>all<td>specified value</table>
