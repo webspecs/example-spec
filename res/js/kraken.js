@@ -25,7 +25,7 @@
             img.src = person.avatar_url;
             img.width = 50;
             img.height = 50;
-            img.alt = person.login;
+            img.alt = "";
             a.appendChild(img);
             a.appendChild(document.createElement("br"));
             var strong = document.createElement("strong");
