@@ -102,7 +102,7 @@ h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
     background: #fff;
     color:  #666;
 }
-#meta button {
+#meta button.linkalike, button.linkalike.tool {
     background: none;
     color:  #0074d9;
     font-size:   inherit;
@@ -125,6 +125,14 @@ header + .contributors a {
     background: #fafaff;
     padding:    5px;
     margin-right:   5px;
+    line-height: 0.8;
+}
+header + .contributors a img {
+    margin-bottom: 0.6em;
+}
+.contributions {
+    font-size:  0.7em;
+    color:  #aaa;
 }
 ul.toc, ol.toc {
     list-style: none;
@@ -275,6 +283,17 @@ a:link, a:visited {
 }
 a[href] img {
     border-style: none;
+}
+button.linkalike {
+    background: none;
+    color:  #0074d9;
+    font-size:   inherit;
+    font-family:   inherit;
+    border: none;
+    border-bottom: 1px solid silver;
+    padding:    0;
+    margin: 0;
+    cursor: pointer;
 }
 code {
     font-weight:    normal;

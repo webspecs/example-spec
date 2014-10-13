@@ -10,7 +10,7 @@
         ,   el = document.createElement("div")
         ;
         el.className = "contributors";
-        el.innerHTML = "<img src='res/img/loading.gif' width='32' height='32'>";
+        el.innerHTML = "<img src='res/img/loading.gif' width='32' height='32'> Loading contributors…";
         header.parentNode.insertBefore(el, header.nextSibling);
         contributorsEl = el;
     }
@@ -20,7 +20,7 @@
         data.forEach(function (person) {
             var a = document.createElement("a");
             a.className = "person";
-            a.href = person.url;
+            a.href = person.html_url;
             var img = document.createElement("img");
             img.src = person.avatar_url;
             img.width = 50;
@@ -31,8 +31,21 @@
             var strong = document.createElement("strong");
             strong.textContent = person.login;
             a.appendChild(strong);
+            a.appendChild(document.createElement("br"));
+            var span = document.createElement("span");
+            span.textContent = "(" + person.contributions + ")";
+            span.className = "contributions";
+            a.appendChild(span);
             contributorsEl.appendChild(a);
         });
+        var button = document.createElement("button");
+        button.className = "linkalike tool";
+        button.textContent = "Hide those pretty faces";
+        button.style.fontSize = "0.8em";
+        button.style.marginTop = "1em";
+        button.onclick = removeContributors;
+        contributorsEl.appendChild(document.createElement("br"));
+        contributorsEl.appendChild(button);
     }
     function errorContributors (err) {
         if (!contributorsEl) return;
