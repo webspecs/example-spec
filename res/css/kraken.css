@@ -115,6 +115,17 @@ h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
 #meta a {
     border-bottom: none;
 }
+header + .contributors {
+    padding:    1em 0;
+}
+header + .contributors a {
+    display:    inline-block;
+    text-align: center;
+    border: 1px solid #7fdbff;
+    background: #fafaff;
+    padding:    5px;
+    margin-right:   5px;
+}
 ul.toc, ol.toc {
     list-style: none;
 }

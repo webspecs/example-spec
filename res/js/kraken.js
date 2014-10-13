@@ -6,25 +6,21 @@
     // handle contributors' list
     var contributorsEl;
     function showContributors () {
-        var parent = document.getElementById("meta")
+        var header = document.getElementById("meta").parentNode
         ,   el = document.createElement("div")
         ;
-        el.id = "meta-contributors";
-        el.innerHTML = "<h2>Contributors</h2><ul class='contributors'><li><img src='res/img/loading.gif' width='32' height='32'></li></ul>";
-        parent.appendChild(el);
+        el.className = "contributors";
+        el.innerHTML = "<img src='res/img/loading.gif' width='32' height='32'>";
+        header.parentNode.insertBefore(el, header.nextSibling);
         contributorsEl = el;
     }
     function updateContributors (data) {
         if (!contributorsEl) return;
-        var ul = contributorsEl.querySelector("ul.contributors");
-        if (!ul) return;
-        ul.innerHTML = "";
+        contributorsEl.innerHTML = "";
         data.forEach(function (person) {
-            var li = document.createElement("li");
-            li.className = "person";
             var a = document.createElement("a");
+            a.className = "person";
             a.href = person.url;
-            li.appendChild(a);
             var img = document.createElement("img");
             img.src = person.avatar_url;
             img.width = 50;
@@ -35,18 +31,16 @@
             var strong = document.createElement("strong");
             strong.textContent = person.login;
             a.appendChild(strong);
-            ul.appendChild(li);
+            contributorsEl.appendChild(a);
         });
     }
     function errorContributors (err) {
         if (!contributorsEl) return;
-        var ul = contributorsEl.querySelector("ul.contributors");
-        if (!ul) return;
-        ul.innerHTML = "";
-        var li = document.createElement("li");
-        li.className = "error";
-        li.textContent = err;
-        ul.appendChild(li);
+        contributorsEl.innerHTML = "";
+        var span = document.createElement("span");
+        span.className = "error";
+        span.textContent = err;
+        contributorsEl.appendChild(span);
     }
     function removeContributors () {
         if (!contributorsEl) return;
