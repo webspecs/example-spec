@@ -2,7 +2,6 @@
 
 <pre class='metadata'>
 Shortname: example-spec
-!Repository: webspecs/example-spec
 Group: WebSpecs
 Abstract: This specification is meant to evolve into a permanent example of how a WebSpec is made. Before that, though, it is used primarily as a an area in which to develop this specification style.
 </pre>
