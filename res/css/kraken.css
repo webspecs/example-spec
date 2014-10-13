@@ -126,6 +126,7 @@ header + .contributors a {
     padding:    5px;
     margin-right:   5px;
     line-height: 0.8;
+    border-radius:  2px;
 }
 header + .contributors a img {
     margin-bottom: 0.6em;
