@@ -1,34 +1,42 @@
 
-/* Fonts: Raleway */
+/* Fonts */
 @font-face {
-    font-family: "Raleway";
-    src: url("../fonts/raleway-thin-webfont.eot");
-    src: url("../fonts/raleway-thin-webfont.eot?#iefix") format("embedded-opentype"),
-         url("../fonts/raleway-thin-webfont.woff") format("woff"),
-         url("../fonts/raleway-thin-webfont.ttf") format("truetype");
-    font-weight: 100;
+    font-family: 'Roboto';
+    src: url('../fonts/robotoslab-regular-webfont.eot');
+    src: url('../fonts/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotoslab-regular-webfont.woff2') format('woff2'),
+         url('../fonts/robotoslab-regular-webfont.woff') format('woff'),
+         url('../fonts/robotoslab-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/robotoslab-bold-webfont.eot');
+    src: url('../fonts/robotoslab-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotoslab-bold-webfont.woff2') format('woff2'),
+         url('../fonts/robotoslab-bold-webfont.woff') format('woff'),
+         url('../fonts/robotoslab-bold-webfont.ttf') format('truetype');
+    font-weight: bold;
     font-style: normal;
 }
 
-/* Font Settings */
+/* Structure */
 body {
     font-family:    sans-serif;
     color: black;
     counter-reset: exampleno figure issue;
     line-height: 1.5;
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family:    Raleway, sans-serif;
-}
-
-/* Structure */
-html, body {
-    margin: 0;
+    max-width: 50em;
+    margin: 1em auto;
     padding:    0;
 }
-div.content, div.meta {
-    max-width: 50em;
-    margin: 0 auto;
+h1, h2, h3, h4, h5, h6 {
+    font-family:    Roboto, serif;
+}
+html {
+    margin: 0;
+    padding:    0;
 }
 body > section {
     padding-bottom:    3em;
@@ -41,25 +49,32 @@ section {
 header {
     display:    block;
     background: #fff;
-    top:    0;
-    max-width: 50em;
-    margin: 1em auto 4em auto;
+    background: url("../img/lines.svg") repeat-x 0 30px;
+    border-bottom:  1px solid #7fdbff;
 }
-@media (min-width:  50em) {
-    #logo {
-        position:   fixed;
-        top:    16px;
-        left:   16px;
-    }
+#logo {
+    display:    block;
+    width:  200px;
+    background:    #fff;
+    text-align: center;
+    font-variant: small-caps;
+    font-family:    Georgia, serif;
+    font-size:  0.7em;
+    color:  #999;
+    margin: 0 auto;
 }
 h1 {
-    margin: 4em 0 3em 0;
+    margin: 1em 0 1.6em 0;
     text-align: center;
+    font-size:  4em;
+    font-weight:    normal;
+    color:  #666;
+    text-shadow:    1px 1px 1px #aaa;
 }
 h1, h2, h3, h4, h5, h6, dt {
     page-break-after: avoid;
 }
-h2, h3 { color: #fe6965; }
+h2, h3 { color: #0074d9; }
 h2, h3, h5, h6 {
     margin-top: 3em;
 }
@@ -77,17 +92,21 @@ h1 + h2,
 h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
     margin-top: 1.2em; /* = 1 x line-height */
 }
-
-
 #meta {
-    font-family:    Raleway, sans-serif;
-    text-align: right;
+    font-family:    Roboto, sans-serif;
     font-size:  0.8em;
+    text-align: center;
+    margin: auto;
+    margin-bottom:  -10px;
+    max-width:  400px;
+    background: #fff;
+    color:  #666;
 }
 #meta button {
     background: none;
-    color:  #fe6965;
-    font:   inherit;
+    color:  #0074d9;
+    font-size:   inherit;
+    font-family:   inherit;
     border: none;
     padding:    0;
     margin: 0;
@@ -95,15 +114,6 @@ h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
 }
 #meta a {
     border-bottom: none;
-}
-#editors {
-    list-style-type:    none;
-    padding:    0;
-    margin: 0;
-    text-align: right;
-}
-#editors li {
-    line-height:    1.4;
 }
 ul.toc, ol.toc {
     list-style: none;
@@ -125,11 +135,6 @@ ul.toc a:hover, ul.toc a:focus  { border-bottom-style: solid; }
         text-decoration-style: solid;
     }
 }
-/*
-ul.toc li li li, ul.toc li li li ul {margin-left: 0; display: inline}
-ul.toc li li li ul, ul.toc li li li ul li {margin-left: 0; display: inline}
-*/
-
 /* Section numbers in a column of their own */
 ul.toc {
     margin-left: 5em
@@ -254,7 +259,7 @@ ol.inline li:before {
 /********** Inlines  **************/
 a:link, a:visited {
     border-bottom: 1px solid silver;
-    color:  #fe6965;
+    color:  #0074d9;
     text-decoration:    none;
 }
 a[href] img {
