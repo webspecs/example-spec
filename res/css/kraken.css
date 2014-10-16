@@ -1,4 +1,14 @@
 
+/*
+    XXX
+    - hanging links still need work for small screen
+    - hanging numeral
+    - change bg colour for all coloured boxes, use icons
+        - examples
+        - definition boxes
+        
+*/
+
 /* Fonts */
 @font-face {
     font-family: 'Roboto';
@@ -49,7 +59,7 @@ section {
 header {
     display:    block;
     background: #fff;
-    background: url("../img/lines.svg") repeat-x 0 30px;
+    background: url("../img/header-lines.svg") repeat-x 0 30px;
     border-bottom:  1px solid #7fdbff;
 }
 #logo {
@@ -581,16 +591,18 @@ blockquote {
 
 /** Open issue ****************************************************************/
 .issue {
-    border-color: #E05252;
-    background: #FBE9E9;
-    counter-increment: issue;
+    background: url("../img/issue-icon.svg") no-repeat;
+    padding-left:   50px;
+    border: none;
     overflow: auto;
+    min-height: 50px;
+    counter-increment: issue;
 }
 .issue:before {
     content: "Issue " counter(issue);
     padding-right: 1em;
     text-transform: uppercase;
-    color: #E05252;
+    color: #ff4136;
 }
 
 /** Example *******************************************************************/
@@ -621,9 +633,11 @@ blockquote {
 
 /** Non-normative Note ********************************************************/
 .note, .why {
-    border-color: #52E052;
-    background: #E9FBE9;
+    background: url("../img/note-icon.svg") no-repeat;
+    padding-left:   50px;
+    border: none;
     overflow: auto;
+    min-height: 50px;
 }
 
 /** Advisement Box ************************************************************/
@@ -875,4 +889,42 @@ table.proptable th .property {
     margin: 1.5cm 1.1cm;
 }
 
-/* XXX do small screen styling too */
+@media (max-width: 55em) {
+    body {
+        max-width:  100%;
+        padding:    0 2em;
+    }
+    h1 {
+        font-size:  3em;
+        margin: 0 0 0.5em 0;
+    }
+    a.self-link {
+        left: -1.5em;
+    }
+    li > a.self-link {
+        /* XXX make sure this is correct */
+        left: -1em;
+    }
+}
+@media (max-width: 30em) {
+    h1 {
+        font-size:  2em;
+    }
+    #logo {
+        width:  40px;
+    }
+    #logo img {
+        width:  20px;
+        height: 20px;
+    }
+    #logo span {
+        display:    none;
+    }
+    header {
+        background-position:    0 5px;
+    }
+    h2, h3, h5, h6 {
+        margin-top: 1em;
+    }
+}
+
