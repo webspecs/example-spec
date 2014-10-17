@@ -188,9 +188,6 @@ ul.toc li {
 */
 
 /********** Structure **************/
-pre {
-    margin-left: 2em;
-}
 dt {
     font-weight: bold;
 }
@@ -458,6 +455,11 @@ pre.deprecated, .deprecated pre {
     color: red;
 }
 
+.example pre, pre.example, pre.html, pre.xml {
+    background: #eee;
+    padding:    1em;
+}
+
 /** IDL fragments *************************************************************/
 pre.idl {
     /* Match blue propdef boxes */
@@ -607,14 +609,16 @@ blockquote {
 
 /** Example *******************************************************************/
 .example {
-    border-color: #E0CB52;
-    background: #FCFAEE;
+    border: none;
+/*    background: #FCFAEE;*/
+    background: url("../img/unicorn.svg") no-repeat;
     counter-increment: exampleno;
     overflow: auto;
     clear: both;
+    padding-left:   45px;
 }
 .example:before {
-    color: #B9AB2D;
+    color: #ff851b;
     font-family: sans-serif;
 }
 .example:before {
@@ -659,9 +663,8 @@ table.descdef, table.definition-table {
     page-break-inside: avoid;
     width: 100%;
     margin: 1.2em 0;
-    border-left: 0.5em solid #8CCBF2;
+    background: url("../img/defs-lines.svg") repeat-y;
     padding: 0.5em 1em;
-    background: #DEF;
     border-spacing: 0;
 }
 
