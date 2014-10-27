@@ -11,7 +11,7 @@ Introduction</h2>
 
     A lot can get in the way of writing a good specification. The formalism, while necessary, can
     inhibit creativity and eat up precious time.
-    
+
     WebSpecs use a specific variant of Markdown called "Bikeshed" (after the famous
     <a href="https://en.wikipedia.org/wiki/Parkinson%27s_law_of_triviality">Parkinson law of triviality</a>
     which is commonly known as "bikeshedding" in the standards world). It does a lot of things for
@@ -25,7 +25,7 @@ Exemplify</h3>
     <div class='example'>
         Examples can be included at any time, and here we have a great specimen, even given its own
         subsection.
-        
+
         <pre>#webspecs { will-change: all; }</pre>
     </div>
 
@@ -49,3 +49,5 @@ Element Definitions</h2>
     <div class='note'>
         This includes generating the right <code>dfn</code> elements, table of elements, etc.
     </div>
+
+<script src="https://notes.webplatform.org/embed.js" async defer></script>
