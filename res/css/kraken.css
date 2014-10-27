@@ -605,6 +605,7 @@ blockquote {
     padding-right: 1em;
     text-transform: uppercase;
     color: #ff4136;
+    display: block;
 }
 
 /** Example *******************************************************************/
